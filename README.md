@@ -91,6 +91,33 @@ The system also includes administrative permissions for review management.
 Prepared SQL statements are used for database operations.
 
 ---
+## Website Preview
+
+### Home Page
+
+![On the Go Home Page](demo/home-page.jpeg)
+
+### Fast Food Drive-Thrus
+
+![Fast Food Drive-Thrus](demo/fast-food-page.jpeg)
+
+### Reviews
+
+The review system includes user authentication and displays reviews submitted for different drive-thru locations.
+
+![Reviews Login](demo/reviews-login.png)
+
+![Drive-Thru Reviews](demo/reviews-list.png)
+
+### About Us
+
+![About On the Go](demo/about-page.jpeg)
+
+### Contact Us
+
+![Contact On the Go](demo/contact-page.jpeg)
+
+---
 
 ## Technologies
 
