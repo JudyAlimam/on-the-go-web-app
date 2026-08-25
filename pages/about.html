@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>About - On the Go</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="MainStyles.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Page styles */
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .left-column {
+            width: 40%;
+            text-align: left;
+        }
+
+        .about-title {
+            color: rgb(27, 27, 121);
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .company-intro {
+            font-size: 1.3rem;
+            color: rgb(27, 27, 121);
+            margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-intro::before {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 15px solid rgb(27, 27, 121);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+
+        .right-column {
+            width: 55%;
+            background-color: lightgray;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-column h4 {
+            color: rgb(27, 27, 121);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .right-column p {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            background-color: rgb(27, 27, 121);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .read-more:hover {
+            background-color: rgb(27, 27, 121);
+        }
+
+        /* Hidden Content */
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        /* Adjust layout for smaller screens (less than 768px) */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .left-column,
+            .right-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">On The Go</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="driveThruDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Drive-Thrus
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="driveThruDropdown">
+                                <li><a class="dropdown-item" href="drinks-desserts.html">Drinks and Desserts</a></li>
+                                <li><a class="dropdown-item" href="food.html">Food</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.php">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <div class="container my-4">
+        <div class="about-section">
+            <!-- Left Column for Title, Intro, and Image -->
+            <div class="left-column">
+                <h1 class="about-title">About Us</h1>
+                <p class="company-intro">On The Go Introduction</p>
+                <img src="abouttpic.jpg" alt="About Us Image" class="about-img">
+            </div>
+
+            <!-- Right Column for Content in Gray Box -->
+            <div class="right-column">
+                <h4>What We Offer?</h4>
+                <p>Whether you're on a road trip or just looking for a quick bite, we make it easy to find the perfect
+                    spot. Explore a comprehensive list of drive-thru locations with their menus and branch details, all
+                    designed for a seamless experience while you're on the go.</p>
+
+                <h4>Why Choose Us?</h4>
+                <p>What makes us special is our list of drive-thru places loved by all ages, especially teenagers. We
+                    know how much fun it is to go for a car ride, and our website features the coolest spots that cater
+                    to your cravings. From classic favorites to trendy new options, you’ll find the perfect places to
+                    enjoy on your next drive!</p>
+
+                <h4>Why Drive-Thru Experience Made Easy?</h4>
+                <p>There are many explanations for the surge in the drive-through's popularity.
+                <div class="hidden-content" id="extraContent">
+                    A big part of it is that the drive-through experience has become faster and more efficient due to
+                    technology and infrastructure improvements. Nowadays, people prefer the convenience of grabbing
+                    a meal on the go without leaving their cars, making it an ideal option for busy lifestyles. Whether
+                    it’s for a
+                    quick coffee, a family meal, or a late-night snack, the drive-through offers a hassle-free
+                    solution that fits seamlessly into modern life.</p>
+                </div>
+
+                <div class="button-container">
+                    <button class="read-more" onclick="toggleReadMore()">Read More <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleReadMore() {
+            const extraContent = document.getElementById("extraContent");
+            const button = document.querySelector(".read-more");
+
+            if (extraContent.style.display === "none" || extraContent.style.display === "") {
+                extraContent.style.display = "block";
+                button.innerHTML = "Read Less <span class='arrow'>←</span>";
+            } else {
+                extraContent.style.display = "none";
+                button.innerHTML = "Read More <span class='arrow'>→</span>";
+            }
+        }
+    </script>
+
+    <!-- Contact Us Section -->
+    <footer>
+        <div class="container text-center">
+            <br>
+            <h5>Connect with</h5>
+            <h5 class="display-6 fw-bold">On The Go</h5>
+            <br>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">call</span>
+                <p class="mb-0">+966 53 720 2289</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">mail</span>
+                <p class="mb-0">OntheGo@gmail.com</p>
+            </div>
+            <p class="mt-3">© 2024 On the Go. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

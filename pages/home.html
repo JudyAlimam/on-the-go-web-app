@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Home - On the Go</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="MainStyles.css">
+
+    <style>
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 70vh;
+            color: white;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgb(27, 27, 121);
+        }
+
+        /* featured section */
+        .featured-items {
+            padding: 2rem 0;
+        }
+
+        .featured-item {
+            border: 2px solid rgb(27, 27, 121);
+            background-color: #f3f8f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-item p {
+            background-color: rgb(27, 27, 121);
+            color: #ffffff;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px;
+            border-top: 2px solid rgb(27, 27, 121);
+            transition: padding 0.3s ease;
+        }
+
+        .extra-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(27, 27, 121);
+            color: yellow;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .featured-item:hover .extra-info {
+            transform: translateY(0);
+        }
+
+        .featured-item:hover p {
+            padding-bottom: 40px;
+        }
+
+        /* Categories */
+        .drive-thrus {
+            background: linear-gradient(to right, #f0f4f8, #e0e7ff);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .drive-thru-card {
+            height: 430px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .drive-thru-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            color: rgb(27, 27, 121);
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: rgb(27, 27, 121);
+            border-color: rgb(27, 27, 121);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: gray;
+            
+        }
+
+        .btn-outline-primary {
+            border-color: rgb(27, 27, 121);
+            color: rgb(27, 27, 121);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: rgb(27, 27, 121);
+            /* Fill on hover */
+            color: white;
+        }
+
+        /* Additional Responsive Styles */
+        @media (max-width: 768px) {
+            .drive-thrus {
+                padding: 60px 15px;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* About Us Section */
+        .about-us {
+            background-color: #f7f7f7;
+        }
+
+        .blur-image {
+            filter: blur(2px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">On The Go</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="driveThruDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Drive-Thrus
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="driveThruDropdown">
+                                <li><a class="dropdown-item" href="drinks-desserts.html">Drinks and Desserts</a></li>
+                                <li><a class="dropdown-item" href="food.html">Food</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.php">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative text-center d-flex justify-content-center align-items-center"
+        style="height: 70vh;">
+        <img src="main.jpg" alt="Drive-Thru Experience" class="img-fluid w-100 h-100 position-absolute top-0 start-0"
+            style="object-fit: cover; z-index: -1;">
+        <div class="hero-content">
+            <h1 class="display-4 fw-bold text-shadow">On The Go? We've Got Your Drive-Thru Guide!</h1>
+            <p class="lead text-shadow">Find the best drive-thru spots for your next trip</p>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- Featured Section -->
+    <section class="featured-items my-4">
+        <div class="container">
+            <h2 class="common-heading text-center">Renowned Specialties</h2>
+            <div class="row">
+                <!-- First Row -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="8oz.jpg" alt="Known for its Chocolate pudding" class="img-fluid">
+                        <p>Chocolate pudding</p>
+                        <div class="extra-info">8Oz Coffee</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="CaffeineLab.jpg" alt="Addicting Coffee" class="img-fluid">
+                        <p>Ice shakerato</p>
+                        <div class="extra-info">Caffeine Lab</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="JoeAndTheJuice.jpg" alt="Most-Hyped Tuna Sandwich" class="img-fluid">
+                        <p>Tuna Spicy Sandwich</p>
+                        <div class="extra-info">Joe & The Juice</div>
+                    </div>
+                </div>
+                <!-- Second Row -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="TNDRZ.jpg" alt="15 pcs chicken tenders" class="img-fluid">
+                        <p>TNDR Bucket</p>
+                        <div class="extra-info">TNDR</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="halfmillion.jpg" alt="known for its trendiest cup" class="img-fluid">
+                        <p>Iced Hibuscus</p>
+                        <div class="extra-info">Half Million</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="featured-item">
+                        <img src="sign burger.jpg" alt="6 burgers with fries" class="img-fluid">
+                        <p>Sign Gathering Box</p>
+                        <div class="extra-info">Sign Burger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drive-Thrus Section -->
+    <section class="drive-thrus py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Explore Our Drive-Thrus</h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card drive-thru-card shadow-lg border-0 rounded">
+                        <img src="drinksdessert.jpg" alt="Drinks & Desserts" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Drinks & Desserts</h3>
+                            <p class="card-text">Indulge in a variety of refreshing drinks and sweet desserts tailored
+                                for your taste.</p>
+                            <a href="drinks-desserts.html" class="btn btn-primary">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card drive-thru-card shadow-lg border-0 rounded">
+                        <img src="fastfood.jpg" alt="Fast Food" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Fast Food</h3>
+                            <p class="card-text">Quick bites that satisfy your cravings without slowing you down.</p>
+                            <a href="food.html" class="btn btn-primary">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="hero-section position-relative text-center d-flex justify-content-center align-items-center"
+        style="height: 70vh;">
+        <img src="AboutUs.jpg" alt="About Us" class="img-fluid w-100 h-100 position-absolute top-0 start-0 blur-image"
+            style="object-fit: cover; z-index: -1;">
+        <div class="hero-content">
+            <h1 class="display-4 fw-bold text-shadow">About On The Go</h1>
+            <p class="centered text-shadow"> Welcome to On the Go, Jeddah’s drive-thru guide! <br>
+                We turn quick stops into tasty adventures, helping you find the best bites while you’re on the move.
+                Your delicious detour awaits!</p>
+            <a href="about.html" class="btn btn-primary btn-lg mt-3">Read More</a>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <footer>
+        <div class="container text-center">
+            <br>
+            <h5>Connect with</h5>
+            <h5 class="display-6 fw-bold">On The Go</h5>
+            <br>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">call</span>
+                <p class="mb-0">+966 53 720 2289</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">mail</span>
+                <p class="mb-0">OntheGo@gmail.com</p>
+            </div>
+            <p class="mt-3">© 2024 On the Go. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

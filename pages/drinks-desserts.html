@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Drinks & Desserts - On the Go</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="MainStyles.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .header-title {
+            font-size: 3rem;
+            margin-top: 20px;
+            color: #003366;
+            text-align: center;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .restaurant-section {
+            border: 1px solid rgb(27, 27, 121);
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .restaurant-section:hover {
+            transform: scale(1.02);
+        }
+
+        .menu-content {
+            border: 2px solid rgb(27, 27, 121);
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid rgb(27, 27, 121);
+            padding-bottom: 5px;
+            color: rgb(27, 27, 121);
+        }
+
+        .img-fluid {
+            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            color: white;
+            margin-top: 40px;
+            padding: 20px 0;
+        }
+
+        .btn-view-menu {
+            background-color: rgb(27, 27, 121);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-view-menu:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">On The Go</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="driveThruDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Drive-Thrus
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="driveThruDropdown">
+                                <li><a class="dropdown-item" href="drinks-desserts.html">Drinks and Desserts</a></li>
+                                <li><a class="dropdown-item" href="food.html">Food</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.php">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="container my-4">
+        <h1 class="header-title">Drinks & Desserts Drive-Thrus</h1>
+        <br>
+
+        <div class="row">
+            <!-- Row -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Row</h2>
+                    <img src="roww.jpg" alt="Row" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">5.0 ⭐</span></p>
+                    <div class="collapse" id="menuRow">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li><strong>Brownies Bites</strong> - <span class="badge bg-dark">10 SAR</span></li>
+                                <li><strong>Crunchy Bites</strong> - <span class="badge bg-dark">5 SAR</span></li>
+                                <li><strong>Spanish Latte</strong> - <span class="badge bg-dark">18 SAR</span></li>
+                                <li><strong>Caramel French Toast</strong> - <span class="badge bg-dark">24 SAR</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuRow">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- Sculpture -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Sculpture</h2>
+                    <img src="sculpture.jpg" alt="Sculpture" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-warning">4.0 ⭐</span></p>
+                    <div class="collapse" id="menuSculpture">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li><strong>Sculpture 1</strong> - Lavender <span class="badge bg-dark">27 SAR</span></li>
+                                <li><strong>Sculpture 2</strong> - Pistachio <span class="badge bg-dark">28 SAR</span></li>
+                                <li><strong>Sculpture 3</strong> - Salted Caramel <span class="badge bg-dark">28 SAR</span>
+                                </li>
+                                <li><strong>Sculpture 4</strong> - Spanish Latte <span class="badge bg-dark">27 SAR</span>
+                                </li>
+                                <li><strong>Iced Latte</strong> - <span class="badge bg-dark">20 SAR</span></li>
+                                <li><strong>Kunafa French Toast</strong> - <span class="badge bg-dark">35 SAR</span></li>
+                                <li><strong>Nutella French Toast</strong> - <span class="badge bg-dark">30 SAR</span></li>
+                                <li><strong>Caramel French Toast</strong> - <span class="badge bg-dark">30 SAR</span></li>
+                                <li><strong>Lotus French Toast</strong> - <span class="badge bg-dark">30 SAR</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuSculpture">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- 80z -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>8oz</h2>
+                    <img src="8oz.jpg" alt="80z" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">3.9 ⭐</span></p>
+                    <div class="collapse" id="menu8oz">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li><strong>Chocolate Babka</strong> <span class="badge bg-danger">New</span> - <span
+                                    class="badge bg-dark">19 SAR</span></li>
+                                <li><strong>Crunchy Chocolate Cookies</strong> <span class="badge bg-danger">New</span> - <span
+                                    class="badge bg-dark">17 SAR</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menu8oz">View
+                        Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <footer>
+        <div class="container text-center">
+            <br>
+            <h5>Connect with</h5>
+            <h5 class="display-6 fw-bold">On The Go</h5>
+            <br>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">call</span>
+                <p class="mb-0">+966 53 720 2289</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">mail</span>
+                <p class="mb-0">OntheGo@gmail.com</p>
+            </div>
+            <p class="mt-3">© 2024 On the Go. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

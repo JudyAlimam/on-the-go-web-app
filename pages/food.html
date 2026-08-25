@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Food - On the Go</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="MainStyles.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .header-title {
+            font-size: 3rem;
+            margin-top: 20px;
+            color: #003366;
+            text-align: center;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .restaurant-section {
+            border: 1px solid rgb(27, 27, 121);
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .restaurant-section:hover {
+            transform: scale(1.02);
+        }
+
+        .menu-content {
+            border: 2px solid rgb(27, 27, 121);
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid rgb(27, 27, 121);
+            padding-bottom: 5px;
+            color: rgb(27, 27, 121);
+        }
+
+        .img-fluid {
+            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+
+        footer {
+            color: white;
+            margin-top: 40px;
+            padding: 20px 0;
+        }
+
+        .btn-view-menu {
+            background-color: rgb(27, 27, 121);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-view-menu:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">On The Go</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="driveThruDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Drive-Thrus
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="driveThruDropdown">
+                                <li><a class="dropdown-item" href="drinks-desserts.html">Drinks and Desserts</a></li>
+                                <li><a class="dropdown-item" href="food.html">Food</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.php">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="container my-4">
+        <h1 class="header-title">Fast Food Drive-Thrus</h1>
+        <br>
+
+        <div class="row">
+            <!-- Sign Burger -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Sign Burger</h2>
+                    <img src="sign burger.jpg" alt="Sign Burger" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">4.7 ⭐</span></p>
+                    <div class="collapse" id="menuSignBurger">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li><strong>Sign Beef Meal</strong> - Juicy beef patty, lettuce, tomato, onion - <span
+                                        class="badge bg-dark">24 SAR</span></li>
+                                <li><strong>Sign Chicken Meal</strong> - Classic burger with melted cheddar cheese
+                                    -<span class="badge bg-dark">24 SAR</span></li>
+                                <li><strong>Gathering Box</strong> - 4 burgers with fries - <span
+                                        class="badge bg-dark">88 SAR</span></li>
+                                <li></li><strong>Gathering Box</strong> - 6 burgers with fries - <span
+                                    class="badge bg-dark">132 SAR</span></li>
+                                <li><strong>Sign Fries</strong> - <span class="badge bg-dark">6 SAR</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuSignBurger">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- Tikka Way -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Tikka Way</h2>
+                    <img src="tikkaway.jpg" alt="Tikka Way" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-warning">3.8 ⭐</span></p>
+                    <div class="collapse" id="menuTikkaWay">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li><strong>Tikka Sandwich</strong> - <span class="badge bg-dark">9.5 SAR</span></li>
+                                <li><strong>Tikka Fries</strong> - <span class="badge bg-dark">17 SAR</span></li>
+                                <li><strong>Water</strong> - <span class="badge bg-dark">2 SAR</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuTikkaWay">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- Albaik -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Al-Baik</h2>
+                    <img src="baik.jpg" alt="Albaik" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">5.0 ⭐</span></p>
+                    <div class="collapse" id="menuAlbaik">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li>
+                                    <strong>7 pcs Nuggets</strong> - <span class="badge bg-dark">13.5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>10 pcs Nuggets</strong> - <span class="badge bg-dark">17 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Fish Fillet Sandwich</strong> - <span class="badge bg-dark">7.5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Chicken Fillet Sandwich</strong> - <span class="badge bg-dark">6.5
+                                        SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Double BAIK</strong> - <span class="badge bg-dark">7.5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Super Baik Shrimp</strong> - <span class="badge bg-dark">19 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Super Baik Grilled Chicken</strong> <span class="badge bg-danger">New</span>
+                                    - <span class="badge bg-dark">13.5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Shawerma Sandwich</strong> - <span class="badge bg-dark">5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>BBQ Baik</strong> - chicken with BBQ sauce and double cheese - <span
+                                        class="badge bg-dark">8.5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>ALBAIK chips</strong> - crunchy potato chips - <span class="badge bg-dark">4
+                                        SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Coleslaw Salad</strong> - <span class="badge bg-dark">4 SAR</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuAlbaik">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- TNDR -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>TNDR</h2>
+                    <img src="TNDR.jpg" alt="TNDR" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">4.5 ⭐</span></p>
+                    <div class="collapse" id="menuTNDR">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li>
+                                    <strong>The Kit</strong> - 4 chicken tenders with sauce fries Texas bread - <span
+                                        class="badge bg-dark">22 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Wrap</strong> -2 tnrdz, lettuce, cheese, tortilla- <span
+                                        class="badge bg-dark">15 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Wrap Combo</strong> -Wrap, 2 tnrdz, fries- <span class="badge bg-dark">25
+                                        SAR</span>
+                                </li>
+                                <li>
+                                    <strong>TNDR Sub</strong> -chicken, lettuce, cheese, tndr sauce, sub bread- <span
+                                        class="badge bg-dark">22 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Sub Combo</strong> -TNDR Sub, 2 tndrz, fries - <span
+                                        class="badge bg-dark">35 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>The Bucket</strong> - 15 Tndrz, 14 oz sauce, fries, 2 coleslaw, 3 bread-
+                                    <span class="badge bg-dark">99 SAR</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuTNDR">View
+                        Menu</button>
+                </div>
+            </div>
+
+            <!-- Bunbastic Burger -->
+            <div class="col-lg-4 col-md-6">
+                <div class="restaurant-section">
+                    <h2>Bunbastic Burger</h2>
+                    <img src="bunbastic.jpg" alt="bunbastic" class="img-fluid mb-2">
+                    <p><strong>Overall Rating:</strong> <span class="badge bg-success">4.3 ⭐</span></p>
+                    <div class="collapse" id="menuBunbastic">
+                        <div class="full-menu">
+                            <h3>Menu:</h3>
+                            <ul>
+                                <li>
+                                    <strong>Classic Burger</strong> - <span class="badge bg-dark">19 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Truffle Burger</strong> - <span class="badge bg-dark">24
+                                        SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Bacon Burger</strong> - <span class="badge bg-dark">27 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Regular Fries</strong> - <span class="badge bg-dark">5 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Sweet Fries</strong> - <span class="badge bg-dark">11 SAR</span>
+                                </li>
+                                <li>
+                                    <strong>Ceaser Juice</strong> - <span class="badge bg-dark">5 SAR</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-view-menu" data-bs-toggle="collapse" data-bs-target="#menuBunbastic">View
+                        Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <footer>
+        <div class="container text-center">
+            <br>
+            <h5>Connect with</h5>
+            <h5 class="display-6 fw-bold">On The Go</h5>
+            <br>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">call</span>
+                <p class="mb-0">+966 53 720 2289</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <span class="material-symbols-outlined me-2">mail</span>
+                <p class="mb-0">OntheGo@gmail.com</p>
+            </div>
+            <p class="mt-3">© 2024 On the Go. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
