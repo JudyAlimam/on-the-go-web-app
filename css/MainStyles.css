@@ -1,0 +1,96 @@
+/* General Styles */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgb(27, 27, 121); 
+}
+
+.navbar-brand, .nav-link {
+    color: #fff; 
+}
+
+.nav-link.active {
+    color: #fff !important; 
+}
+
+.navbar-brand:hover,.nav-link:hover, .nav-link.active:hover {
+    color: yellow !important; 
+}
+
+/* Override the hover state to keep it dark gray */
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: rgb(100, 100, 100) !important; 
+    color: white !important; 
+}
+
+/* Override the active state to keep it dark gray */
+.navbar .nav-item .dropdown-menu .dropdown-item:active {
+    background-color: rgb(100, 100, 100) !important; 
+    color: white !important; 
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(27, 27, 121); 
+    color: white !important; 
+    padding: 20px 0; 
+    text-align: center; 
+}
+
+footer h3 {
+    font-size: 1.75rem; 
+    margin-bottom: 15px; 
+}
+
+footer p {
+    margin: 0; 
+}
+
+footer .material-symbols-outlined {
+    color: white; 
+}
+
+/* Additional styles for headings and buttons */
+h2,h3, h4 {
+    color: rgb(27, 27, 121); 
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: rgb(27, 27, 121); 
+    border-color: rgb(27, 27, 121); 
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-outline-primary {
+    color: rgb(27, 27, 121); 
+    border-color: rgb(27, 27, 121);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover effect */
+.btn-primary:hover {
+    background-color: gray; 
+    color: white; 
+}
+
+.btn-outline-primary:hover {
+    background-color: gray; 
+    color: white; 
+    border-color: gray; 
+}
+
+/* Change button color to gray when clicked */
+.btn-primary:active,
+.btn-outline-primary:active {
+    background-color: gray !important; 
+    border-color: gray !important; 
+    color: white !important; 
+}
